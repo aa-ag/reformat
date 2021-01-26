@@ -13,8 +13,12 @@ def break_into_paragraphs():
 
     tex_reader = text.read()
 
-    for sentence in tex_reader.split('.'):
-        print(sentence)
+    # reformat into paragraphs of 4 sentences each
+    with open('reformated_into_paragraphs.txt', 'w') as reformatted:
+        for sentence in tex_reader.split('.'):
+            reformatted.write(sentence.lstrip() + '.\n')
+
+        reformatted.close()
 
 
 ###--- DRIVER CODE ---###
