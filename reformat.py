@@ -14,7 +14,8 @@ def break_into_paragraphs():
     tex_reader = text.read()
 
     # reformat into paragraphs of 4 sentences each
-    with open('reformated_into_paragraphs.txt', 'w') as reformatted:
+    # currently missing sentences that end in "!" or "?" etc.
+    with open('reformatted_into_paragraphs.txt', 'w') as reformatted:
         for sentence in tex_reader.split('.'):
             reformatted.write(sentence.lstrip() + '.\n')
 
