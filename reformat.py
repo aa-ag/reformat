@@ -13,10 +13,10 @@ def break_into_paragraphs():
     # reformat into paragraphs of 4 sentences each
     # currently missing sentences that end in "!" or "?" etc.
     with open('reformatted_into_paragraphs.txt', 'w+') as reformatted:
+        paragraph = '.\n\n'.join('.\n'.join(text_reader.split(
+            '.')[i:i+4]).lstrip() for i in range(0, len(text_reader.split('.')), 4))
 
-        reformatted.write(
-            '.\n\n'.join('.'.join(text_reader.split('.')[
-                i:i+4]).lstrip() for i in range(0, len(text_reader.split('.')), 4)))
+        reformatted.write(paragraph.center(50))
 
         reformatted.close()
 
