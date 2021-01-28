@@ -15,12 +15,16 @@ def break_into_paragraphs():
     text_reader = text.read()
 
     # reformat into paragraphs of 4 sentences each
-    # currently missing sentences that end in "!" or "?" etc.
     with open('reformatted_into_paragraphs.txt', 'w+') as reformatted:
-        as_list = re.split('\.|\?|!', text_reader)
+        # using regex to split text anytime there is a whitespace followed by a Capital letter
+        # which certainly means "start of sentence"
+        sentences_as_list = re.split(
+            r'[ ](?=[A-Z])', text_reader)
+
         split = [sentence.lstrip()
-                 for sentence in as_list]
-        paragraph = '.\n\n'.join('.\n'.join(
+                 for sentence in sentences_as_list]
+
+        paragraph = '\n\n'.join('\n'.join(
             split[i:i+4]) for i in range(0, len(split), 4))
 
         reformatted.write(paragraph)
