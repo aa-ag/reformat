@@ -30,7 +30,7 @@ def break_into_paragraphs():
         sentences_as_list = re.split(
             r'[ ](?=[A-Z])', text_reader)
 
-        split = [sentence.lstrip()
+        split = [sentence.lstrip().center(100)
                  for sentence in sentences_as_list]
 
         paragraph = '\n\n'.join('\n'.join(
