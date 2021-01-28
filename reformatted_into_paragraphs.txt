@@ -1,4 +1,4 @@
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+[1mLorem ipsum dolor sit amet, consectetuer adipiscing elit.
 Aenean commodo ligula eget dolor.
 Aenean massa!
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus?
@@ -991,4 +991,4 @@ Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae e
 Mauris sollicitudin fermentum libero.
 Praesent nonummy mi in odio.
 Nunc interdum lacus sit amet orci.
-Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi.
+Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi.[0m

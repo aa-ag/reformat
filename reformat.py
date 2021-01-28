@@ -2,6 +2,13 @@
 import re
 
 
+###--- GLOBAL ---###
+class font_styles:
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
+
+
 ###--- FUNCTIONS ---###
 def break_into_paragraphs():
     '''
@@ -9,6 +16,8 @@ def break_into_paragraphs():
      then creates paragraphs of 3 sentences each,
      and saves result to new document
     '''
+    global font_styles
+
     # read text file
     text = open('5k_words_in_1_paragraph.txt', 'r+')
 
@@ -26,6 +35,10 @@ def break_into_paragraphs():
 
         paragraph = '\n\n'.join('\n'.join(
             split[i:i+4]) for i in range(0, len(split), 4))
+
+        # BOLD in terminal
+        # paragraph = font_styles.BOLD + '\n\n'.join('\n'.join(
+        #     split[i:i+4]) for i in range(0, len(split), 4)) + font_styles.END
 
         reformatted.write(paragraph)
 
