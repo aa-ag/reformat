@@ -34,7 +34,7 @@ def break_into_paragraphs():
                  for sentence in sentences_as_list]
 
         paragraph = '\n\n'.join('\n'.join(
-            split[i:i+4]) for i in range(0, len(split), 4))
+            j.title() for j in split[i:i+4]) for i in range(0, len(split), 4))
 
         # BOLD in terminal
         # paragraph = font_styles.BOLD + '\n\n'.join('\n'.join(
