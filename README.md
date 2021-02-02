@@ -2,10 +2,11 @@
 
 Python script to refomrat text files.
 
-### challenges in order
+- `conda activate reformat`
 
-1. [Wrap](https://docs.python.org/3/library/textwrap.html) each paragraph.
-2. Add special characters for first sentence of N number of paragraphs (sections)
+### NEXT
+
+- [`pip install JustifyText`](https://pypi.org/project/JustifyText/)
 
 ### CHECK
 
